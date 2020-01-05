@@ -1,5 +1,67 @@
 # 100DaysOfCode Log - Round 1
 
+## Day 2
+
+### 05/01/20
+
+## Sending email with nodemailer [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/24)
+
+### Set up mailtrap
+
+- Set up [mailtrap](https://mailtrap.io) to receive emails and set `host`, `post`, `username` and `password` as env variables
+
+### Set up nodemailer
+
+- Create a Nodemailer transporter using SMTP
+- Set up email template
+
+```
+# mail.js
+const nodemailer = require('nodemailer');
+
+export const transporter = nodemailer.createTransport({
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS
+  }
+});
+
+export const emailTemplate = text =>
+  `<div>
+    <p>${text}</p>
+  </div>`;
+```
+
+### Send email
+
+- Send email using the `sendEmail` method of the transporter
+
+```
+import { transporter, emailTemplate } from './mail';
+
+server.post('/send-mail', (req, res) => {
+    try {
+        await transport.sendMail({
+            from: 'anEmail@email.com',
+            to: 'anotherEmail@email.com',
+            subject: 'An email',
+            html: emailTemplate(
+            'Here is some text'
+            )
+        });
+        res.send(200);
+    } catch (error) {
+        throw new Error(`Error requesting password reset ${error}`);
+    }
+});
+```
+
+### Notes
+
+Use [mjml](https://mjml.io) for sophisticated templates.
+
 ## Day 1
 
 ### 04/01/20
