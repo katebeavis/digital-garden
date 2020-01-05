@@ -36,7 +36,7 @@ export const emailTemplate = text =>
 
 ### Send email
 
-- Send email using the `sendEmail` method of the transporter
+- Send email using the `sendMail` method of the transporter
 
 ```
 import { transporter, emailTemplate } from './mail';
@@ -53,7 +53,7 @@ server.post('/send-mail', (req, res) => {
         });
         res.send(200);
     } catch (error) {
-        throw new Error(`Error requesting password reset ${error}`);
+        throw new Error(`An email occurred ${error}`);
     }
 });
 ```
