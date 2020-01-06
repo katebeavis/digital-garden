@@ -1,5 +1,46 @@
 # 100DaysOfCode Log - Round 1
 
+## Day 3
+
+### 06/01/20
+
+## Only allows authenticated users to access signed in pages [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/28)
+
+### Create an authenticated wrapper
+
+- Create an simple authenticated wrapper which checks if a user is signed in or not using the `useAuth` hook and renders either the sign in components or the children it is passed.
+
+### useAuth hook
+
+As not much coding happened today (first day back at work) I will go over the `useAuth` custom hook.
+
+> A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
+
+The `useAuth` hook is relatively simple as far as hooks go - it calls another hook, in this case Apollo's `useQuery` and then returns an array of `loading` and `error` states and `data`.
+
+```
+import { useQuery } from 'react-apollo';
+
+import { CURRENT_USER_QUERY } from '../queries/queries';
+
+const useAuth = () => {
+  const { loading, error, data } = useQuery(CURRENT_USER_QUERY);
+  return [loading, error, data];
+};
+
+export default useAuth;
+```
+
+These can then be destructured in the component that is using the `useAuth` hook.
+
+```
+const [loading, error, data] = useAuth();
+```
+
+### Notes
+
+Ideally refactor to use authenticated routes as wrapping every single signed in component in the authentication wrapper will start to get tedious if the application grows.
+
 ## Day 2
 
 ### 05/01/20
