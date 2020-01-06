@@ -4,11 +4,11 @@
 
 ### 06/01/20
 
-## Only allows authenticated users to access signed in pages [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/28)
+## Only allow authenticated users to access signed in pages [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/28)
 
 ### Create an authenticated wrapper
 
-- Create an simple authenticated wrapper which checks if a user is signed in or not using the `useAuth` hook and renders either the sign in components or the children it is passed.
+- Create a simple authenticated wrapper which checks if a user is signed in or not using the `useAuth` hook and render either the sign in component or the children it is passed.
 
 ### useAuth hook
 
