@@ -6,6 +6,32 @@
 
 ## Learn how to learn course
 
+### Introduction to memory
+
+> Working memory is the part of memory that has to do with what you're immediately and consciously processing in your mind.
+
+> Researchers used to think that our working memory could hold around seven items or chunks, but now it's widely believed that the working memory holds only about four chunks of information.
+
+> You often need to keep repeating what you're trying to work with so it stays in your working memory. For example, you'll sometimes repeat a phone number to yourself until you have a chance to write it down. Repetitions needed so that your metabolic vampires that is natural dissipating processes don't suck those memories away.
+
+> The other form of memory, long term memory is wide a storage warehouse, and just like a warehouse, it's distributed over a big area. Different kinds of long-term memories are stored in different regions of the brain. Research has shown that when you first try to put an item of information in long-term memory, you need to revisit it at least a few times to increase the chances that you'll be able to find it later when you might need it.
+
+> So it can be difficult for you to find the information you need unless you practice and repeat at least a few times.
+
+> Long-term memory is important because it's where you store fundamental concepts and techniques that are often involved in whatever you're learning about. When you encounter something new, you often use your working memory to handle it. If you want to move that information into your long-term memory, it often takes time and practice.
+
+> To help with this process, use a technique called spaced repetition. This technique involves repeating what you're trying to retain, but what you want to do is a space this repetition out.
+
+> Extending your practice over several days does make a difference. Research has shown that if you try to glue things into your memory by repeating something 20 times in one evening for example, it won't stick nearly as well as if you practice it the same number of times over several days. This is like building the brick wall we saw earlier, if you don't leave time for the mortar to dry, that is time for the synoptic connections to form and strengthen, you won't have a very good structure.
+
+There are two types of memory - working & long term.
+
+Working memory can hold only about four chunks of information & can be compared to an inefficient blackboard. You need to keep on repeating what you're trying to remember. This explains why it is easy to get 'lost' when following code through multiple files - your chunks are full.
+
+Long term memory is where you store fundamental concepts & techniques. Moving something to long term memory often takes time and practice. You need to revisit the memory at least a few times to be able to easily recall i. Repetition helps with this but it's best to space it out.
+
+It's best to space the repetition out rather than cramming it into one day. Practice it the same number of times over several days.
+
 ### Practice makes perfect
 
 > In the greater scheme of all the different careers and disciplines that people can pursue, why are those involving math and science, sometimes, a bit more challenging? We think it may be related, at least in part, to the abstract nature of the ideas.
