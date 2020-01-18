@@ -6,6 +6,16 @@
 
 ## Learn how to learn course
 
+### The importance of sleep
+
+> You might be surprised to learn that just plain being awake creates toxic products in your brain. How does the brain get rid of these poisons? Turns out that when you sleep, your brain cells shrink. This causes an increase in the space between your brain cells. It's like unblocking a stream. Fluid can flow past these cells and wash the toxins out. So, sleep which can sometimes seem like such a waste of time is actually your brain's way of keeping itself clean and healthy.
+
+> It seems that during sleep, your brain tidies up ideas and concepts you're thinking about and learning. It erases the less important parts of memories and simultaneously strengthens areas that you need or want to remember.
+
+Sleep is a very important part of memory and learning.
+
+By getting a good nights sleep, you enhance your chances of solidifing concepts you have been studying.
+
 ### Introduction to memory
 
 > Working memory is the part of memory that has to do with what you're immediately and consciously processing in your mind.
