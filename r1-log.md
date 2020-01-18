@@ -42,7 +42,7 @@ A good way to learn is to study it hard by focusing intently and then take a bre
 
 https://www.brainscape.com/blog/2016/08/better-learning-focused-vs-diffuse-thinking/
 
-Focused thinking is when all your attention is on the matter at hand and there are no distractions. Diffuse thinking is when you are not 100% focused and let you mind wander - an explanation for the 'shower epiphany'
+Focused thinking is when all your attention is on the matter at hand and there are no distractions. Diffuse thinking is when you are not 100% focused and let your mind wander - an explanation for the 'shower epiphany'.
 
 ## Day 3
 
