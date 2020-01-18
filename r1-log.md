@@ -28,7 +28,7 @@ There are two types of memory - working & long term.
 
 Working memory can hold only about four chunks of information & can be compared to an inefficient blackboard. You need to keep on repeating what you're trying to remember. This explains why it is easy to get 'lost' when following code through multiple files - your chunks are full.
 
-Long term memory is where you store fundamental concepts & techniques. Moving something to long term memory often takes time and practice. You need to revisit the memory at least a few times to be able to easily recall i. Repetition helps with this but it's best to space it out.
+Long term memory is where you store fundamental concepts & techniques. Moving something to long term memory often takes time and practice. You need to revisit the memory at least a few times to be able to easily recall it. Repetition helps with this but it's best to space it out.
 
 It's best to space the repetition out rather than cramming it into one day. Practice it the same number of times over several days.
 
