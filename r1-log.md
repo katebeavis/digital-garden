@@ -15,14 +15,14 @@ This is an example of using the `useMutation` hook to toggle a cart open and clo
 Firstly create the `clientState` object and set the default for the variable you want to toggle, in this case `cartOpen`
 
 ```
-  return new ApolloClient({
-    // code removed for brevity
-    clientState: {
-      defaults: {
-        cartOpen: true
-      }
+return new ApolloClient({
+  // code removed for brevity
+  clientState: {
+    defaults: {
+      cartOpen: true
     }
-  });
+  }
+});
 ```
 
 ### Query the local state
@@ -43,29 +43,29 @@ const { loading, error, data } = useQuery(LOCAL_STATE_QUERY);
 <Cart open={cartOpen} />
 ```
 
-### Add a mutation resolver to the Apollo client
+### Add a mutation resolver to the Apollo Client
 
 Back in the Apollo Client, add a mutation resolver so that the value can be changed from the front end.
 
 ```
 return new ApolloClient({
-    // code removed for brevity
-    clientState: {
-      resolvers: {
-        Mutation: {
-          toggleCart(_root, variables, { cache }) {
-            const { cartOpen } = cache.readQuery({ query: LOCAL_STATE_QUERY });
-            const data = { data: { cartOpen: !cartOpen } };
-            cache.writeData(data);
-            return data;
-          }
+  // code removed for brevity
+  clientState: {
+    resolvers: {
+      Mutation: {
+        toggleCart(_root, variables, { cache }) {
+          const { cartOpen } = cache.readQuery({ query: LOCAL_STATE_QUERY });
+          const data = { data: { cartOpen: !cartOpen } };
+          cache.writeData(data);
+          return data;
         }
-      },
-      defaults: {
-        cartOpen: true
       }
+    },
+    defaults: {
+      cartOpen: true
     }
- });
+  }
+});
 ```
 
 #### Broken down line by line:
@@ -74,9 +74,9 @@ return new ApolloClient({
 
 ```
 Mutation: {
-    toggleCart(_root, variables, { cache }) {
-        ....
-    }
+  toggleCart(_root, variables, { cache }) {
+    ....
+  }
 }
 ```
 
@@ -102,9 +102,9 @@ In the cart component create a mutation and then use the `useMutation` hook to t
 
 ```
 const TOGGLE_CART_MUTATION = gql`
-    mutation TOGGLE_CART_MUTATION {
-        toggleCart @client
-    }
+  mutation TOGGLE_CART_MUTATION {
+    toggleCart @client
+  }
 `;
 
 const [toggleCart] = useMutation(TOGGLE_CART_MUTATION);
