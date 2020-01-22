@@ -1,5 +1,119 @@
 # 100DaysOfCode Log - Round 1
 
+## Day 6
+
+### 22/01/20
+
+## Apollo local state [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/44)
+
+### Set up clientState in Apollo Client
+
+> There are two main ways to perform local state mutations. The first way is to directly write to the cache by calling cache.writeData. Direct writes are great for one-off mutations that don't depend on the data that's currently in the cache, such as writing a single value. The second way is by leveraging the useMutation hook with a GraphQL mutation that calls a local client-side resolver. We recommend using resolvers if your mutation depends on existing values in the cache, such as adding an item to a list or toggling a boolean.
+
+This is an example of using the `useMutation` hook to toggle a cart open and closed.
+
+Firstly create the `clientState` object and set the default for the variable you want to toggle, in this case `cartOpen`
+
+```
+  return new ApolloClient({
+    // code removed for brevity
+    clientState: {
+      defaults: {
+        cartOpen: true
+      }
+    }
+  });
+```
+
+### Query the local state
+
+Create a query so that this value can be queried. Use the `@client` directive to tell the Apollo Client to fetch the field data locally (either from the cache or using a local resolver), instead of sending it to the GraphQL server.
+
+That variable can then be fetched as normal using `useQuery`. By toggling the value in the defaults object the cart component will receive either a true or false value.
+
+```
+const LOCAL_STATE_QUERY = gql`
+  query LOCAL_STATE_QUERY {
+    cartOpen @client
+  }
+`;
+
+const { loading, error, data } = useQuery(LOCAL_STATE_QUERY);
+
+<Cart open={cartOpen} />
+```
+
+### Add a mutation resolver to the Apollo client
+
+Back in the Apollo Client, add a mutation resolver so that the value can be changed from the front end.
+
+```
+return new ApolloClient({
+    // code removed for brevity
+    clientState: {
+      resolvers: {
+        Mutation: {
+          toggleCart(_root, variables, { cache }) {
+            const { cartOpen } = cache.readQuery({ query: LOCAL_STATE_QUERY });
+            const data = { data: { cartOpen: !cartOpen } };
+            cache.writeData(data);
+            return data;
+          }
+        }
+      },
+      defaults: {
+        cartOpen: true
+      }
+    }
+ });
+```
+
+#### Broken down line by line:
+
+##### Create the toggleCart mutation
+
+```
+Mutation: {
+    toggleCart(_root, variables, { cache }) {
+        ....
+    }
+}
+```
+
+##### Read the current state of cartOpen from the cache
+
+`const { cartOpen } = cache.readQuery({ query: LOCAL_STATE_QUERY });`
+
+##### Set a data value with cartOpen set to the opposite of what it currently is
+
+`const data = { data: { cartOpen: !cartOpen } };`
+
+##### Write that value back to the cache
+
+`cache.writeData(data);`
+
+##### Return that data
+
+`return data;`
+
+### Toggle that value using a mutation
+
+In the cart component create a mutation and then use the `useMutation` hook to toggle the `cartOpen` variable.
+
+```
+const TOGGLE_CART_MUTATION = gql`
+    mutation TOGGLE_CART_MUTATION {
+        toggleCart @client
+    }
+`;
+
+const [toggleCart] = useMutation(TOGGLE_CART_MUTATION);
+
+<CloseButton onClick={() => toggleCart()} title='close'>
+```
+
+This value will now be updated in Apollo's local state.
+
 ## Day 5
 
 ### 18/01/20
