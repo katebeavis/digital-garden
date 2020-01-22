@@ -39,6 +39,7 @@ const LOCAL_STATE_QUERY = gql`
 `;
 
 const { loading, error, data } = useQuery(LOCAL_STATE_QUERY);
+const { cartOpen } = data;
 
 <Cart open={cartOpen} />
 ```
@@ -109,7 +110,7 @@ const TOGGLE_CART_MUTATION = gql`
 
 const [toggleCart] = useMutation(TOGGLE_CART_MUTATION);
 
-<CloseButton onClick={() => toggleCart()} title='close'>
+<CloseButton onClick={() => toggleCart()}>
 ```
 
 This value will now be updated in Apollo's local state.
