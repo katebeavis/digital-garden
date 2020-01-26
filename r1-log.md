@@ -1,5 +1,33 @@
 # 100DaysOfCode Log - Round 1
 
+## Day 7
+
+### 26/01/20
+
+## Update useAuth hook [react-graphql-store](https://github.com/katebeavis/react-graphql-shop/pull/47)
+
+Refactor `useAuth` hook to return an object instead of an array. This means the results can easily be destructured and renamed.
+
+```
+// before
+const useAuth = () => {
+  const { loading, error, data } = useQuery(CURRENT_USER_QUERY);
+  return [loading, error, data];
+}
+```
+
+```
+// after
+const useAuth = () => {
+  const { loading, error, data } = useQuery(CURRENT_USER_QUERY);
+  return { loading, error, data };
+}
+```
+
+Now you can do this:
+
+`const { loading: userLoading, error: userError, data: userData } = useAuth();`
+
 ## Day 6
 
 ### 22/01/20
