@@ -121,7 +121,7 @@ const DetailsScreen = ({ route, navigation }) => {
 
 Screens can also update their params, like they can update their state. The `navigation.setParams`
 
-You can also pass some initial params to a screen. If yiu didn't specify any params when navigating to the screen, the initial params will be used.
+You can also pass some initial params to a screen. If you didn't specify any params when navigating to the screen, the initial params will be used.
 
 ## Passing params to a previous screen
 
