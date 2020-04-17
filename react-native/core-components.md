@@ -44,7 +44,7 @@ Displays a circular loading indicator.
 
 ## [RefreshControl](https://reactnative.dev/docs/refreshcontrol)
 
-Used inside a `ScrollView` or `ListView` to add pull tp refresh functionality. When the `ScrollView` is at `scrollY: 0`, swiping down triggers an `onRefresh` event.
+Used inside a `ScrollView` or `ListView` to add pull to refresh functionality. When the `ScrollView` is at `scrollY: 0`, swiping down triggers an `onRefresh` event.
 
 ## [Picker](https://reactnative.dev/docs/picker)
 
