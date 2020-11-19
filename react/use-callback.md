@@ -19,7 +19,7 @@ Each re-render, the Child will re-execute its function prop uselessly. If you pa
 
 https://dev.to/milu_franz/demystifying-react-hooks-usecallback-and-usememo-1a8j
 
-You should consider using useCallback and/or useMemo hooks on the following situations:
+You should consider using useCallback and/or useMemo hooks in the following situations:
 
 1. Processing large amounts of data
 2. Working with interactive graphs and charts
@@ -28,4 +28,4 @@ You should consider using useCallback and/or useMemo hooks on the following situ
 
 When a component is re-rendered, it creates new instances of all objects, including all the functions in it.
 
-useCallback - Allows you to cache an instance of a function between renders
+**useCallback - Allows you to cache an instance of a function between renders**
