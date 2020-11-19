@@ -1,5 +1,9 @@
 # useCallback
 
+## TLDR;
+
+**useCallback - Allows you to cache an instance of a function between renders**
+
 ```
 const memoizedCallback = useCallback(
   () => {
@@ -27,5 +31,3 @@ You should consider using useCallback and/or useMemo hooks in the following situ
 4. Incorporating component lazy loading (useMemo specifically)
 
 When a component is re-rendered, it creates new instances of all objects, including all the functions in it.
-
-**useCallback - Allows you to cache an instance of a function between renders**
