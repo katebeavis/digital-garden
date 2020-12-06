@@ -2,13 +2,13 @@
 
 Functions get a new local memory when they are run/executed
 
-They are "functions with memories"
+They are 'functions with memories'
 
 ## Functions with memories
 
 - When our functions get called, we create a live store of data (local memory/variable environment/state) for that function's execution context
 
-- When the function finsihes executing, its local memory is deleted (except the returned value)
+- When the function finishes executing, its local memory is deleted (except the returned value)
 
 - But what if our functions could hold onto live data between executions?
 
@@ -28,7 +28,7 @@ They are "functions with memories"
  const result = generatedFunction(3); // 6
 ```
 
-`generatedFunction` is equivilent to `multiplyBy2`
+`generatedFunction` is equivalent to `multiplyBy2`
 
 `generatedFunction` no longer has **anything** to do with `createFunction`. `createFunction` is no longer in local memory
 
@@ -68,7 +68,7 @@ When `incrementCounter` is returned as the result of calling `outer()` the funct
 
 ## Technical definition
 
-## What can we call this 'backpack'
+### What can we call this 'backpack'
 
 The local memory that is returned can be referred to as the variable environment. Closed over variable environment. Also known as closure
 
@@ -82,7 +82,7 @@ The `backpack` (or 'closure') of live data is attached to `incrementCounter` (th
 
 **Helper functions:** Everyday professional helper functions like `once` and `memoize`
 
-**Iterators and generators:** Which use lexical scoping and closure to achieve the most contemporafy patterns for handling data in Javascript
+**Iterators and generators:** Which use lexical scoping and closure to achieve the most contemporary patterns for handling data in Javascript
 
 **Module pattern:** Preserve state for the life of an application without polluting the global namespace
 
