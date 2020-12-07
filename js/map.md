@@ -26,16 +26,16 @@ By definition, a Map object holds key-value pairs where values of any type can b
 const users = new Map([['dave', '28'],['bob', '42']])
 // iterate over keys
 for (let name of users.keys()) {
-alert(name); // dave, bob
+  alert(name); // dave, bob
 }
 
 // iterate over values
 for (let age of users.values()) {
-alert(age); // 28, 52
+  alert(age); // 28, 52
 }
 
 // iterate over [key, value] entries
 for (let entry of users) { // the same as of users.entries()
-alert(entry); // dave,28 (and so on)
+  alert(entry); // dave,28 (and so on)
 }
 ```
