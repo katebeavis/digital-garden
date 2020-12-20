@@ -73,3 +73,29 @@ const foodB = ["🍭", "🍧", "🍦", "🍫"];
 const union = [...new Set([...foodA, ...foodB])];
 console.log(union); // ["🍪", "🍫", "🍭", "🍧", "🍦"]
 ```
+
+### Check if an array contains any element from another array
+
+```
+const foodA = ["🍪", "🍫", "🍭"];
+const foodB = ["🍭", "🍧", "🍦", "🍫"];
+
+const hasMatchingElements = foodA.some((item) => foodB.includes(item));
+console.log(hasMatchingElements); // true
+```
+
+### Check if an array contains every element from another array
+
+```
+const foodA = ["🍪", "🍫", "🍭"];
+const foodB = ["🍭", "🍧", "🍦", "🍫"];
+
+const containsAllElements = foodA.every((item) => foodB.includes(item));
+console.log(hasMatchingElements); // false
+
+const foodA = ["🍪", "🍫", "🍭"];
+const foodB = ["🍭", "🍪", "🍦", "🍫"];
+
+const containsAllElements = foodA.every((item) => foodB.includes(item));
+console.log(hasMatchingElements); // true
+```
