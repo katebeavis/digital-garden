@@ -2,11 +2,19 @@
 
 Navigation in React Native apps is commonly handled by `react-navigation`
 
-The whole app needs to be wrapped in `NavigationContainer` whicj is a component which manages our navigation tree and contains the navigation state. This component must wrap all navigators structure.
+There are three types of navigation in React native - **tab navigation** **drawer navigation** and **stack navigation**
+
+Tab navigation is the most common form of navigation in mobile apps and consists of bottom and top tabs. An of bottom navigation example in many apps is the home icon, search icon etc at the bottom of the screen. Navigating between screens is pretty instant. When the app is launched, all root pages on the bottom navigation get rendered at once
+
+Drawer navigation is when the app has a drawer from the left or right side of the screen in order to navigate the app. Usually it consists of links. It's similar to a side bar in web based apps. Twitter is an example of an app that uses this
+
+Stack navigation uses the concept of 'stacks' to transition between scrrens. Screens are stacked on top of each other and movement between screens adds to the stack
+
+The whole app needs to be wrapped in `NavigationContainer` which is a component which manages our navigation tree and contains the navigation state. This component must wrap all navigators structure.
 
 ## Stack navigator
 
-The stack navigator provides a way for your app to transition bewtween screens and manage navigation history.
+The stack navigator provides a way for your app to transition between screens and manage navigation history.
 
 If your app uses only one stack navigator then it is conceptually similar to how a web browser handles navigation state - your app pushes an dpops items from the navigation stack as users interact with it, and this resukts in the user seeing different screens.
 
@@ -54,9 +62,11 @@ const App = () => {
 
 ## Moving between screens
 
+<!-- TODO add backlink -->
+
 To move between screens we use the `navigation` prop that is passed down to our screen components.
 
-To programmaticaly go back you can use `navigation.goBack()`
+To programmatically go back you can use `navigation.goBack()`
 
 To go back to the first screen in the stack you can use `navigation.popToTop()`
 

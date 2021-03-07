@@ -8,7 +8,7 @@ There are two types of `NodeList` = _live_ and _static_
 
 In some cases a `NodeList` is _live_, meaning that when the DOM updates, the `NodeList` automatically updates
 
-<!-- TODO link this -->
+<!-- TODO add backlink -->
 
 `Node.childNodes` is live
 
