@@ -39,14 +39,14 @@ contentSecurityPolicy: {
 Policies include:
 
 ```
-`default-src `is a fallback directive used to specify the default content policy for most of the source directives. Common uses include default-src 'self' to allow content from the current origin (but not its subdomains) and default-src 'none' to block everything that’s not explicitly whitelisted.
-`script-src` is used to whitelist script sources. To allow scripts from the current origin only, use script-src 'self'.
-`style-src` is used to whitelist CSS stylesheet sources. To allow stylesheets from the current origin only, use style-src 'self'.
-`connect-src` specifies permitted origins for direct JavaScript connections that use EventSource, WebSocket, or XMLHttpRequest objects.
-`object-src` allows control over the sources of plugins such as Flash. Note that you can also specify permitted plugin types using the plugin-types directive (unsupported in Firefox as of v76).
-`img-src` lets you restrict image sources.
-`font-src` specifies permitted sources for loading fonts.
-`media-src` restricts origins for loading sound and video resources.
-`child-src` is used to restrict permitted URLs for JavaScript workers and embedded frame contents, including embedded videos. In Level 3, frame-src and worker-src directives can be used instead to control embedded content and worker processes respectively.
-`frame-ancestors` restricts URLs that can embed the current resource in <iframe>, <object> and similar elements.
+default-src is a fallback directive used to specify the default content policy for most of the source directives. Common uses include default-src 'self' to allow content from the current origin (but not its subdomains) and default-src 'none' to block everything that’s not explicitly whitelisted.
+script-src is used to whitelist script sources. To allow scripts from the current origin only, use script-src 'self'.
+style-src is used to whitelist CSS stylesheet sources. To allow stylesheets from the current origin only, use style-src 'self'.
+connect-src specifies permitted origins for direct JavaScript connections that use EventSource, WebSocket, or XMLHttpRequest objects.
+object-src allows control over the sources of plugins such as Flash. Note that you can also specify permitted plugin types using the plugin-types directive (unsupported in Firefox as of v76).
+img-src lets you restrict image sources.
+font-src specifies permitted sources for loading fonts.
+media-src restricts origins for loading sound and video resources.
+child-src is used to restrict permitted URLs for JavaScript workers and embedded frame contents, including embedded videos. In Level 3, frame-src and worker-src directives can be used instead to control embedded content and worker processes respectively.
+frame-ancestors restricts URLs that can embed the current resource in <iframe>, <object> and similar elements.
 ```
