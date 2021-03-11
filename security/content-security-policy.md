@@ -50,3 +50,5 @@ media-src restricts origins for loading sound and video resources.
 child-src is used to restrict permitted URLs for JavaScript workers and embedded frame contents, including embedded videos. In Level 3, frame-src and worker-src directives can be used instead to control embedded content and worker processes respectively.
 frame-ancestors restricts URLs that can embed the current resource in <iframe>, <object> and similar elements.
 ```
+
+https://scotthelme.co.uk/hardening-payment-forms-with-csp
