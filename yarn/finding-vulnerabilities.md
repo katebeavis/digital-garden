@@ -2,7 +2,7 @@
 
 `$ yarn audit`
 
-By level (info|low|moderate|high|critical)
+## By level (info|low|moderate|high|critical)
 
 `$ yarn audit --level critical`
 
